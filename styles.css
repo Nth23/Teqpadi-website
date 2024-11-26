@@ -1,0 +1,717 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #49297c; /* Purple background */
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  padding: 1rem 5rem;
+  color: white;
+  position: relative;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navbar .nav-links{
+  margin-left: 150px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.5s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffe701; /* Yellow on hover */
+  text-decoration: underline;
+}
+
+/* Navbar Link Styling */
+.navbar .nav-links li a {
+  position: relative;
+  padding-bottom: 4px; /* Add space for the underline */
+  text-decoration: none; /* Remove default underline */
+  color: #fff; /* Adjust text color as needed */
+  font-weight: 500; /* Optional: Add some weight to the font */
+  transition: color 0.3s ease; /* Optional: Smooth transition for text color */
+}
+
+/* Underline Animation */
+.navbar .nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffe701; /* Yellow underline color */
+  transition: width 0.3s ease; /* Animate the width */
+}
+
+/* Hover Effect: Underline Appears */
+.navbar .nav-links li a:hover::after {
+  width: 100%; /* Full width of the link */
+}
+
+/* Optional: Hover color change */
+.navbar .nav-links li a:hover {
+  color: #ffe701; /* Change link color on hover */
+}
+
+/* CTA Button Styling */
+.navbar .cta-button {
+  background-color: #ffe701; /* Yellow button */
+  color: #49297c; /* Purple text for contrast */
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .cta-button:hover {
+  background-color: #e6b800; /* Slightly darker yellow on hover */
+}
+
+/* Side Navigation Styles */
+.side-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  z-index: 999;
+  background-color: #49297ce1; /* Semi-transparent purple */
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  padding: 1rem;
+  transform: translateX(100%); /* Move off-screen */
+  transition: transform 0.3s ease; /* Smooth slide-in effect */
+}
+
+.side-nav.visible {
+  display: flex; /* Make it visible */
+  transform: translateX(0); /* Slide in */
+}
+
+.side-nav .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.side-nav .nav-links li {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.side-nav .nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.side-nav .nav-links li a:hover {
+  color: #ffe701; /* Yellow hover effect */
+}
+
+/* Hamburger Icon */
+.navbar .fa-bars,
+.fa-xmark{
+  display: none; /* Hide the default hamburger icon */
+  color: #ffe701; /* Yellow color */
+  font-size: 2rem;
+  cursor: pointer; /* Pointer cursor for interaction */
+  margin-left: auto;
+}
+
+/* Media Query for Mobile (Optional, if needed) */
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide main navigation links */
+  }
+
+  .navbar .fa-bars {
+    display: flex; /* Show the hamburger icon */
+  }
+
+  .navbar a{
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navbar .cta-button {
+    display: none;
+  }
+}
+
+
+
+
+/* Style for the logo image */
+/* Adjusting logo size */
+.logo-img {
+  width: 120px; /* Set a fixed width for the logo */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cta-button {
+    margin-top: 1rem;
+  }
+}
+
+/* Hero Section Styles */
+/* Updated Hero Section Styles */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 90vh; /* Half the viewport height */
+  background-image: url("./images/vintage-modern-technology-elements.jpg"); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat;
+  color: white; /* Ensures text contrasts with the background */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent overlay for better text visibility */
+  z-index: 1; /* Ensures it appears below the text */
+}
+
+.hero-content {
+  position: relative;
+  bottom: 40px;
+  z-index: 2; /* Places text above the overlay */
+  max-width: 600px; /* Restricts text width for readability */
+  padding: 0 1rem; /* Adds padding for smaller screens */
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button.purple {
+  background-color: #5b2d89; /* Purple button */
+  color: white;
+}
+
+.button.purple:hover {
+  background-color: #48246e; /* Darker purple */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.button.yellow {
+  background-color: #ffe701; /* Yellow button */
+  color: black;
+}
+
+.button.yellow:hover {
+  background-color: #e6b800; /* Slightly darker yellow */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Responsive Hero Section */
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Services Section */
+
+/* Service Section */
+.services {
+  background-color: #f4f4f4; /* Light background for contrast */
+  text-align: center;
+  padding: 50px 0; /* Space out the section */
+}
+
+/* Services Heading */
+.services h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #5b2d89; /* Purple color */
+  margin-bottom: 2rem;
+  text-transform: uppercase; /* Makes the heading stand out */
+}
+
+/* Service Cards Container */
+.service-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Individual Service Card */
+.service-card {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 50px; /* Add margin to create space around each card */
+  transform: scale(1); /* Initial size */
+}
+
+.service-card:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Service Title */
+.service-card h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  color: #5b2d89; /* Purple color for titles */
+}
+
+/* Service Description */
+.service-card p {
+  font-size: 1.1rem;
+  color: #666; /* Light grey text */
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* Service Icon */
+.service-icon {
+  font-size: 4rem; /* Larger icon size */
+  color: #ffe701; /* Yellow icon color */
+  margin-bottom: 1.5rem;
+}
+
+/* Service Card Hover Icon */
+.service-card:hover .service-icon {
+  color: #5b2d89; /* Change icon color on hover */
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+  .service-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 90%; /* Cards will be wider on mobile */
+    margin-bottom: 2rem;
+  }
+
+  .service-icon {
+    font-size: 3rem; /* Slightly smaller icon on mobile */
+  }
+
+  .services h2 {
+    font-size: 2.5rem; /* Smaller heading on mobile */
+  }
+}
+
+/* About Section Styles */
+.about {
+  padding: 60px 150px;
+  background-color: #f8f8f8; /* Light background */
+  height: auto;
+  text-align: center;
+  color: #333; /* Dark text for readability */
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: #5b2d89; /* Purple color */
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+/* Why Choose Us Section */
+.about-feature {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* margin-bottom: 400px; */
+}
+
+.feature-text {
+  flex: 1;
+  text-align: left;
+}
+
+.feature-text h3 {
+  color: #5b2d89; /* Purple color */
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.feature-image {
+  flex: 1;
+  text-align: center;
+}
+
+.feature-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 60%; /* Adjust image width to fit */
+}
+
+/* Our Values Section with Cards */
+.about-values {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.about-values h3 {
+  font-size: 2rem;
+  color: #5b2d89;
+  margin-bottom: 50px;
+}
+
+.value-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.value-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.value-card h4 {
+  font-size: 1.5rem;
+  color: #5b2d89;
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #5b2d89; /* Match the navbar purple color */
+  color: #fff; /* White text */
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  width: 150px; /* Adjust logo size */
+}
+
+.footer-links h3,
+.footer-socials h3 {
+  color: #ffe701; /* Yellow color for headings */
+  margin-bottom: 1rem;
+}
+
+.footer-links ul,
+.footer-socials ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-socials li {
+  margin-bottom: 10px;
+}
+
+.footer-links a,
+.footer-socials a {
+  color: #fff; /* White color for links */
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.footer-links a:hover,
+.footer-socials a:hover {
+  color: #ffe701; /* Change color to yellow on hover */
+}
+
+.footer-socials i {
+  font-size: 1.8rem;
+  margin: 0 10px;
+}
+
+.footer-copyright {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #aaa; /* Light grey for copyright */
+}
+
+/* Testimonial Section Styles */
+.testimonials {
+  padding: 60px 150px;
+  background-color: #f8f8f8; /* Light background */
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  color: #5b2d89; /* Purple color */
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.testimonial-card p {
+  font-size: 1.1rem;
+  color: #333;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonial-card h4 {
+  font-size: 1.2rem;
+  color: #5b2d89; /* Purple color */
+  margin-bottom: 5px;
+}
+
+.testimonial-card p:last-child {
+  font-size: 1.1rem;
+  color: #fbc02d; /* Yellow for stars */
+}
+
+/* Contact Us Section */
+.contact-us {
+  padding: 10px 20px;
+  background-color: #f4f4f4; /* Light background */
+  text-align: center;
+}
+
+.contact-us h2 {
+  font-size: 2.5rem;
+  color: #5b2d89; /* Purple */
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.contact-details {
+  width: 45%;
+}
+
+.contact-details p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 1.2rem;
+  color: #5b2d89;
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #5b2d89;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #6a3a9c; /* Slightly darker purple */
+}
+
+/* CTA Section */
+.cta {
+  height: auto;
+  background-color: #5b2d89; /* Purple background */
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  background-color: #ffe701; /* Yellow */
+  color: #5b2d89; /* Purple text */
+  padding: 15px 30px;
+  font-size: 1.3rem;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #fbc02d; /* Lighter yellow */
+}

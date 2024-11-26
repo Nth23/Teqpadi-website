@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teqpadi</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Main Navigation -->
+      <nav class="navbar">
+        <div class="logo">
+          <img
+            src="./images/Teqpadi_logo_3-removebg-preview.png"
+            alt="Teqpadi Logo"
+            class="logo-img"
+          />
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#cta" class="cta-button">Book Now</a>
+        <!-- Hamburger Icon -->
+        <a href="#" class="menu-icon" onclick="showSideNav()">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+      </nav>
+    
+      <!-- Side Navigation -->
+      <nav class="side-nav">
+        <ul class="nav-links">
+          <a href="#" class="menu-icon" onclick="showSideNav()">
+            <i class="fa-solid fa-xmark"></i>
+          </a>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <section id="hero" class="hero">
+        <div class="hero-content">
+          <h1>Tech Solutions Made Easy</h1>
+          <p>Your Gadget Solutions, Right at Your Fingertips!</p>
+          <div class="cta-buttons">
+            <a href="#services" class="button purple">Book a Repair Now</a>
+            <a href="#shop" class="button yellow">Shop Gadgets</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="about-content">
+          <h2>About Us</h2>
+          <p>
+            Teqpadi is an innovative Nigerian tech startup based in Lagos,
+            committed to transforming the way consumers repair, buy, and swap
+            their tech devices. Our platform combines a reliable verification
+            system, geolocation features, and a transparent rating system to
+            create a trustworthy and efficient marketplace for all your tech
+            needs. At Teqpadi, we focus on simplifying gadget repairs in
+            Nigeria. We offer expert, hassle-free repair services and device
+            swaps directly to your doorstep, saving you time and effort. Whether
+            you're looking to repair your device, swap it for a new one, or
+            purchase a gadget, Teqpadi is your trusted partner for all things
+            tech. Motto: <b><i>Repair, Swap, Buy – Teqpadi, your Guy.</b></i>
+          </p>
+
+          <!-- Why Choose Us Section with Image beside it -->
+          <div class="about-feature">
+            <div class="feature-text">
+              <h3>Why Choose Us?</h3>
+              <p>
+                We believe in making technology easy to use and maintain.
+                Whether it's fixing a broken screen, swapping your phone, or
+                providing expert advice on your gadgets, we have you covered.
+                Our team of trained technicians ensures that your gadgets are
+                repaired with the highest standards of quality, right at your
+                doorstep.
+              </p>
+            </div>
+            <div class="feature-image">
+              <img
+                src="./images/question-mark-tech-repair.jpeg"
+                alt="Why Choose Us Image"
+              />
+            </div>
+          </div>
+
+          <!-- Our Values Section with Cards -->
+          <div class="about-values">
+            <h3>Our Values</h3>
+            <div class="value-cards">
+              <div class="value-card">
+                <h4>Customer Satisfaction</h4>
+                <p>
+                  We always put our customers first and aim to exceed
+                  expectations.
+                </p>
+              </div>
+              <div class="value-card">
+                <h4>Innovation</h4>
+                <p>
+                  We embrace the latest technology trends to bring you the best
+                  solutions.
+                </p>
+              </div>
+              <div class="value-card">
+                <h4>Reliability</h4>
+                <p>Our services are dependable, fast, and convenient.</p>
+              </div>
+              <div class="value-card">
+                <h4>Affordability</h4>
+                <p>
+                  We offer competitive pricing without compromising on quality.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="services" id="services">
+        <h2>Our Services</h2>
+
+        <!-- Service Cards Container -->
+        <div class="service-container">
+          <!-- Service Card 1 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h3>Gadget Repairs</h3>
+            <p>
+              We fix your devices right at your doorstep, with minimal hassle.
+            </p>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-exchange-alt"></i>
+            </div>
+            <h3>Swap Deals</h3>
+            <p>
+              Trade your old gadgets for something new or get a great deal on
+              used devices.
+            </p>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-money-bill"></i>
+            </div>
+            <h3>Gadget Sales</h3>
+            <p>
+              Get quality and affordable gadgets.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials" id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-cards">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <p>
+              "Teqpadi fixed my phone screen so quickly, and I didn't even have
+              to leave my house. Great service!"
+            </p>
+            <h4>John Doe</h4>
+            <p>⭐️⭐️⭐️⭐️⭐️</p>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <p>
+              "I was skeptical at first, but Teqpadi delivered excellent service
+              with no hassle. Highly recommend!"
+            </p>
+            <h4>Mary Smith</h4>
+            <p>⭐️⭐️⭐️⭐️⭐️</p>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <p>
+              "Affordable, quick, and professional! I love how Teqpadi took care
+              of my laptop issues."
+            </p>
+            <h4>Samuel Johnson</h4>
+            <p>⭐️⭐️⭐️⭐️⭐️</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-us" id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+          <div class="contact-details">
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+            <p><strong>Email:</strong> support@teqpadi.com</p>
+            <p><strong>Address:</strong> 123 Tech Street, Lagos, Nigeria</p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <form action="#" method="POST">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+
+            <label for="email">Your Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+
+            <label for="message">Your Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter your message"
+              required
+            ></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="cta" id="cta">
+        <div class="cta-content">
+          <h2>Ready to Get Your Gadget Fixed?</h2>
+          <p>
+            Our expert technicians are ready to fix your devices quickly,
+            affordably, and from the comfort of your home. Book now to get
+            started!
+          </p>
+          <a href="#contact-us" class="cta-button">Book a Service</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <!-- <footer class="footer">
+      <div class="footer-container"> -->
+        <!-- Logo or Brand Name -->
+        <!-- <div class="footer-logo">
+          <img
+            src="./images/Teqpadi_logo_3-removebg-preview.png"
+            alt="Teqpadi Logo"
+          />
+        </div> -->
+
+        <!-- Quick Links -->
+        <!-- <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div> -->
+
+        <!-- Social Media Links -->
+        <!-- <div class="footer-socials">
+          <h3>Follow Us</h3>
+          <ul>
+            <li>
+              <a href="https://facebook.com" target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://instagram.com" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div> -->
+
+      <!-- Copyright -->
+      <!-- <div class="footer-copyright">
+        <p>&copy; 2024 Teqpadi. All Rights Reserved.</p>
+      </div>
+    </footer> -->
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

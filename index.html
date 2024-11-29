@@ -14,6 +14,7 @@
     <header>
       <!-- Main Navigation -->
       <nav class="navbar">
+
         <div class="logo">
           <img
             src="./images/Teqpadi_logo_3-removebg-preview.png"
@@ -21,29 +22,36 @@
             class="logo-img"
           />
         </div>
+
+
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+
+
         <a href="#cta" class="cta-button">Book Now</a>
+
+
         <!-- Hamburger Icon -->
-        <a href="#" class="menu-icon" onclick="showSideNav()">
+        <div class="menu-icon" onclick = "showSideNav()">
           <i class="fa-solid fa-bars"></i>
-        </a>
+        </div>
       </nav>
     
       <!-- Side Navigation -->
       <nav class="side-nav">
         <ul class="nav-links">
-          <a href="#" class="menu-icon" onclick="showSideNav()">
+          <a class="" onclick="showSideNav()">
             <i class="fa-solid fa-xmark"></i>
           </a>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
+
+          <li onclick="hideSideNav()"><a href="#about">About</a></li>
+          <li onclick="hideSideNav()"><a href="#services">Services</a></li>
+          <li onclick="hideSideNav()"><a href="#testimonials">Testimonials</a></li>
+          <li onclick="hideSideNav()"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>

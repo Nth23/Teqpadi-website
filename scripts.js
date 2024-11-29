@@ -27,4 +27,8 @@ function showSideNav() {
     const sidenav = document.querySelector(".side-nav");
     sidenav.classList.toggle("visible");
   }
+function hideSideNav() {
+    const sidenav = document.querySelector(".side-nav");
+    sidenav.classList.remove("visible");
+  }
   

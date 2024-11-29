@@ -14,7 +14,7 @@ html {
 
 body {
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   font-family: "Poppins", sans-serif;
 }
 
@@ -162,70 +162,6 @@ body {
 /* Hamburger Icon */
 
 /* Responsive Navbar */
-@media (max-width: 640px) {
-  .nav-links {
-    display: none; /* Hide main navigation links */
-  }
-
-  .menu-icon {
-    display: flex; /* Show the hamburger icon */
-  }
-
-  .fa-xmark {
-    display: flex;
-    color: #ffe701; /* Yellow color */
-    font-size: 2rem;
-    cursor: pointer; /* Pointer cursor for interaction */
-    margin-right: auto !important;
-  }
-
-  .fa-xmark {
-    display: flex;
-    color: #ffe701; /* Yellow color */
-    font-size: 2rem;
-    cursor: pointer; /* Pointer cursor for interaction */
-    margin-right: auto !important;
-  }
-
-  .navbar a {
-    text-decoration: none;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .navbar .cta-button {
-    display: none;
-  }
-
-  .testimonials {
-    padding: 0px;
-  }
-
-  .testimonial-cards {
-    display: grid;
-    grid-template-columns: auto;
-    width: 100%;
-    padding: 20px;
-  }
-
-  .testimonial-card {
-    width: 100%;
-    padding: 25px;
-  }
-
-  .service-container {
-    display: grid !important;
-    grid-template-columns: auto;
-    place-items: center;
-  }
-
-  .service-card {
-    margin: 0px !important;
-  }
-}
 
 /* Style for the logo image */
 /* Adjusting logo size */
@@ -235,47 +171,6 @@ body {
 }
 
 /* Responsive Navbar */
-@media screen and (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .cta-button {
-    margin-top: 1rem;
-  }
-
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-content p {
-    font-size: 1.2rem;
-  }
-
-  .cta-buttons {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .service-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .service-card {
-    width: 90%; /* Cards will be wider on mobile */
-    margin-bottom: 2rem;
-  }
-
-  .service-icon {
-    font-size: 3rem; /* Slightly smaller icon on mobile */
-  }
-
-  .services h2 {
-    font-size: 2.5rem; /* Smaller heading on mobile */
-  }
-}
 
 /* Hero Section Styles */
 /* Updated Hero Section Styles */
@@ -313,8 +208,8 @@ body {
   position: relative;
   bottom: 40px;
   z-index: 2; /* Places text above the overlay */
-  max-width: 600px; /* Restricts text width for readability */
-  padding: 0 1rem; /* Adds padding for smaller screens */
+  /* max-width: 600px; Restricts text width for readability */
+  padding: 0 2rem; /*Adds padding for smaller screens*/
 }
 
 .hero-content h1 {
@@ -379,7 +274,7 @@ body {
   font-weight: bold;
   color: #5b2d89; /* Purple color */
   margin-bottom: 2rem;
-  text-transform: uppercase; /* Makes the heading stand out */
+  /* text-transform: uppercase; Makes the heading stand out */
 }
 
 /* Service Cards Container */
@@ -441,7 +336,7 @@ body {
 /* About Section Styles */
 .about {
   width: 100%;
-  padding: 60px 150px;
+  padding: 60px 50px;
   background-color: #f8f8f8; /* Light background */
   height: auto;
   text-align: center;
@@ -453,7 +348,7 @@ body {
   color: #5b2d89; /* Purple color */
   margin-bottom: 20px;
   font-weight: bold;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .about-content p {
@@ -510,7 +405,8 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 30px;
-  padding: 0 20px;
+  padding: 0 50px;
+  place-content: center;
 }
 
 .value-card {
@@ -753,4 +649,141 @@ body {
 
 .cta-button:hover {
   background-color: #fbc02d; /* Lighter yellow */
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide main navigation links */
+  }
+
+  .menu-icon {
+    display: flex; /* Show the hamburger icon */
+  }
+
+  .navbar .cta-button {
+    display: none;
+  }
+
+  .about {
+    padding: 30px 50px;
+    text-align: left;
+  }
+
+  .about-feature {
+    display: block;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .testimonials h2 {
+    font-size: 2rem;
+  }
+
+  .value-cards:nth-child(1) {
+    background-color: #49297c;
+  }
+
+  .service-container {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .contact-us h2 {
+    font-size: 2rem;
+  }
+
+  .service-card {
+    width: 90%; /* Cards will be wider on mobile */
+    margin-bottom: 2rem;
+    margin: 0;
+  }
+
+  .service-icon {
+    font-size: 3rem; /* Slightly smaller icon on mobile */
+  }
+
+  .services h2 {
+    font-size: 2rem; /* Smaller heading on mobile */
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-links {
+    display: none; /* Hide main navigation links */
+  }
+
+  .hero .cta-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-icon {
+    display: flex; /* Show the hamburger icon */
+  }
+
+  .about {
+    padding: 20px 30px;
+  }
+
+  .about h2 {
+    font-size: 2rem;
+    margin: 5px;
+  }
+
+  .fa-xmark {
+    display: flex;
+    color: #ffe701; /* Yellow color */
+    font-size: 2rem;
+    cursor: pointer; /* Pointer cursor for interaction */
+    margin-right: auto !important;
+  }
+
+  .fa-xmark {
+    display: flex;
+    color: #ffe701; /* Yellow color */
+    font-size: 2rem;
+    cursor: pointer; /* Pointer cursor for interaction */
+    margin-right: auto !important;
+  }
+
+  .navbar a {
+    text-decoration: none;
+  }
+
+  .navbar .cta-button {
+    display: none;
+  }
+
+  .testimonials {
+    padding: 0px;
+  }
+
+  .testimonial-cards {
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .testimonial-card {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .service-container {
+    display: grid !important;
+    grid-template-columns: auto;
+    place-items: center;
+  }
+
+  .service-card {
+    margin: 0px !important;
+  }
 }

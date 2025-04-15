@@ -7,6 +7,15 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg-color: #49297c;
+  --second-bg-color: #fff;
+  --header-color: #49297c;
+  --text-color: #000;
+  --secondary-color: #ffe701;
+  --hover-color: #e6b800;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -431,7 +440,7 @@ body {
 
 /* Footer Styles */
 .footer {
-  background-color: #5b2d89; /* Match the navbar purple color */
+  background-color: #000; /* Match the navbar purple color */
   color: #fff; /* White text */
   padding: 40px 0;
   text-align: center;
@@ -439,10 +448,10 @@ body {
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   gap: 30px;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
 }
 
@@ -485,6 +494,7 @@ body {
 }
 
 .footer-copyright {
+  text-align: center;
   margin-top: 30px;
   font-size: 1rem;
   color: #aaa; /* Light grey for copyright */
@@ -587,6 +597,7 @@ body {
   font-size: 1.2rem;
   color: #5b2d89;
   margin-top: 20px;
+  text-align: left;
 }
 
 .contact-form input,
@@ -616,7 +627,7 @@ body {
 
 /* CTA Section */
 .cta {
-  height: auto;
+  /* height: auto; */
   background-color: #5b2d89; /* Purple background */
   color: white;
   padding: 80px 20px;
@@ -785,5 +796,14 @@ body {
 
   .service-card {
     margin: 0px !important;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-socials ul {
+    display: flex;
+    justify-content: center;
   }
 }

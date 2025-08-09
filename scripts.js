@@ -32,3 +32,26 @@ function hideSideNav() {
     sidenav.classList.remove("visible");
   }
   
+document.getElementById('bookNowBtn').onclick = function() {
+  document.getElementById('authModal').style.display = 'flex';
+};
+document.getElementById('closeModal').onclick = function() {
+  document.getElementById('authModal').style.display = 'none';
+};
+window.onclick = function(event) {
+  if (event.target == document.getElementById('authModal')) {
+    document.getElementById('authModal').style.display = 'none';
+  }
+};
+document.getElementById('loginTab').onclick = function() {
+  this.classList.add('active');
+  document.getElementById('signupTab').classList.remove('active');
+  document.getElementById('loginForm').style.display = 'flex';
+  document.getElementById('signupForm').style.display = 'none';
+};
+document.getElementById('signupTab').onclick = function() {
+  this.classList.add('active');
+  document.getElementById('loginTab').classList.remove('active');
+  document.getElementById('loginForm').style.display = 'none';
+  document.getElementById('signupForm').style.display = 'flex';
+};

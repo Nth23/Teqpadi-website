@@ -54,6 +54,33 @@
       </nav>
     </header>
 
+    <!-- ...existing code... -->
+
+<!-- Sign-Up/Login Modal -->
+<div id="authModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <div class="auth-tabs">
+      <button id="loginTab" class="active">Login</button>
+      <button id="signupTab">Sign Up</button>
+    </div>
+    <form id="loginForm" class="auth-form">
+      <h2>Welcome Back!</h2>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit" class="auth-btn">Login</button>
+    </form>
+    <form id="signupForm" class="auth-form" style="display:none;">
+      <h2>Create Account</h2>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit" class="auth-btn">Sign Up</button>
+    </form>
+  </div>
+</div>
+<!-- ...existing code... -->
+
     <main>
       <section id="hero" class="hero">
         <div class="hero-content">
@@ -277,7 +304,7 @@
             affordably, and from the comfort of your home. Book now to get
             started!
           </p>
-          <a href="#contact-us" class="cta-button">Book a Service</a>
+          <a href="#contact-us" id="bookNowBtn" class="cta-button">Book a Service</a>
         </div>
       </section>
     </main>

@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#4B0082" />
+    <meta
+      name="description"
+      content="Teqpadi – The trusted system for buying, selling, repairing and managing tech in Nigeria."
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Teqpadi" />
+    <link rel="manifest" href="manifest.json" />
+    <title>Teqpadi – Tech Transaction Infrastructure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      defer
+    ></script>
+  </head>
+
+  <body class="afro-bg">
+    <!-- NAV -->
+    <nav id="main-nav">
+      <a href="#" class="logo-img" aria-label="Teqpadi Home">
+        <img
+          src="./src/images/Teqpadi_logo_3-removebg-preview.png"
+          alt="Teqpadi"
+        />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#vendor">Vendors</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#cta" class="nav-cta">Book Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#about" onclick="closeMobileNav()">About</a>
+      <a href="#services" onclick="closeMobileNav()">Services</a>
+      <a href="#vendor" onclick="closeMobileNav()">Vendors</a>
+      <a href="#testimonials" onclick="closeMobileNav()">Reviews</a>
+      <a href="#cta" onclick="closeMobileNav()">Book Now</a>
+    </div>
+
+    <div class="kente-stripe"></div>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-geo"></div>
+      <div class="hero-shape hs1"></div>
+      <div class="hero-shape hs2"></div>
+      <div class="hero-shape hs3"></div>
+      <div class="hero-layout">
+        <div class="hero-inner">
+          <div class="hero-badge" id="hero-badge">
+            🇳🇬 Nigeria's #1 Tech Transaction Platform
+          </div>
+          <h1 class="hero-h1" id="hero-h1">
+            Repair. Swap.<br /><em>Buy &amp; Sell Tech</em><br />the Smart Way.
+          </h1>
+          <p class="hero-sub" id="hero-sub">
+            Teqpadi is the trusted bridge between tech customers and vendors —
+            transparent pricing, real device values, zero stress.
+          </p>
+          <div class="hero-actions" id="hero-actions">
+            <a href="#services" class="btn-primary">Book a Repair</a>
+            <a href="#value" class="btn-outline">Check Device Value</a>
+          </div>
+          <div class="hero-stats" id="hero-stats">
+            <div class="stat-item">
+              <div class="num" data-target="500">0</div>
+              <div class="label">Devices Repaired</div>
+            </div>
+            <div class="stat-item">
+              <div class="num" data-target="200">0</div>
+              <div class="label">Happy Customers</div>
+            </div>
+            <div class="stat-item">
+              <div class="num" data-target="98">0</div>
+              <div class="label">% Satisfaction Rate</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-right" id="hero-right">
+          <div class="hero-orb"></div>
+          <div class="hero-orb-ring orb-r1"></div>
+          <div class="hero-orb-ring orb-r2"></div>
+          <div class="hero-orb-ring orb-r3"></div>
+          <div class="phone-mockup" id="hero-phone">
+            <div class="phone-notch"></div>
+            <div class="phone-screen-item">
+              <div class="psi-label">Device Value</div>
+              <div class="psi-val yellow">₦185,000</div>
+            </div>
+            <div class="phone-screen-item">
+              <div class="psi-label">Condition</div>
+              <div class="psi-val">Mint ✓</div>
+            </div>
+            <div class="phone-screen-item">
+              <div class="psi-label">Recommendation</div>
+              <div class="psi-val green">Sell Now ↑</div>
+            </div>
+            <div class="phone-screen-item">
+              <div class="psi-label">Repair Status</div>
+              <div class="psi-val green">Complete ✓</div>
+            </div>
+            <div class="phone-bar">Teqpadi — Your Tech Guy</div>
+          </div>
+          <div class="f-card fc-repair" id="fc1">
+            <div class="f-card-icon">🔧</div>
+            <div class="f-card-text">
+              <strong>Repair Booked</strong><span>Screen fix · 2h away</span>
+            </div>
+          </div>
+          <div class="f-card fc-value" id="fc2">
+            <div class="f-card-icon">📊</div>
+            <div class="f-card-text">
+              <strong>Value: ₦185k</strong><span>iPhone 13 · Mint</span>
+            </div>
+          </div>
+          <div class="f-card fc-swap" id="fc3">
+            <div class="f-card-icon">🔄</div>
+            <div class="f-card-text">
+              <strong>Swap Deal</strong><span>Galaxy S23 offer</span>
+            </div>
+          </div>
+          <div class="f-card fc-trust" id="fc4">
+            <div class="f-card-icon">✅</div>
+            <div class="f-card-text">
+              <strong>Verified Vendor</strong><span>4.9 ★ · 120 reviews</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-cue">
+        <span>Scroll</span>
+        <div class="line"></div>
+      </div>
+    </section>
+
+    <!-- VALUE ENGINE -->
+    <section id="value">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag reveal">Value Engine</span>
+        </div>
+        <h2 class="section-h2 text-center reveal">
+          Know Your Device's <span>True Worth</span>
+        </h2>
+        <p class="section-sub reveal">
+          Stop guessing. Get an instant price estimate before you sell, swap, or
+          repair.
+        </p>
+        <div class="value-grid">
+          <div class="value-copy reveal-left">
+            <p>
+              Our Value Engine scans market data across Nigerian tech markets to
+              give you a realistic price range for your device — so you never
+              get shortchanged again.
+            </p>
+            <div class="feature-list">
+              <div class="feat-item">
+                <div class="feat-icon">📊</div>
+                <div class="feat-text">
+                  <strong>Real Market Prices</strong
+                  ><span>Based on current Nigerian market data</span>
+                </div>
+              </div>
+              <div class="feat-item">
+                <div class="feat-icon">⚡</div>
+                <div class="feat-text">
+                  <strong>Instant Estimates</strong
+                  ><span>Get a range in seconds, no sign-up needed</span>
+                </div>
+              </div>
+              <div class="feat-item">
+                <div class="feat-icon">🎯</div>
+                <div class="feat-text">
+                  <strong>Sell, Swap or Repair?</strong
+                  ><span>We recommend the best action for your device</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="value-visual reveal-right">
+            <div class="device-form">
+              <div class="form-row">
+                <label class="form-label">Device Brand</label>
+                <select class="form-select" id="brand">
+                  <option value="">Select brand...</option>
+                  <option>Apple iPhone</option>
+                  <option>Samsung Galaxy</option>
+                  <option>Tecno</option>
+                  <option>Infinix</option>
+                  <option>Xiaomi</option>
+                  <option>Google Pixel</option>
+                  <option>OnePlus</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label class="form-label">Model</label>
+                <input
+                  class="form-input"
+                  id="model"
+                  placeholder="e.g. iPhone 13, Galaxy S22…"
+                />
+              </div>
+              <div class="form-row-2">
+                <div class="form-row">
+                  <label class="form-label">Storage</label>
+                  <select class="form-select" id="storage">
+                    <option>64GB</option>
+                    <option>128GB</option>
+                    <option>256GB</option>
+                    <option>512GB</option>
+                    <option>1TB</option>
+                  </select>
+                </div>
+                <div class="form-row">
+                  <label class="form-label">RAM</label>
+                  <select class="form-select" id="ram">
+                    <option>4GB</option>
+                    <option>6GB</option>
+                    <option>8GB</option>
+                    <option>12GB</option>
+                    <option>16GB</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <label class="form-label">Condition</label>
+                <div class="condition-btns">
+                  <button class="cond-btn active" data-cond="Mint">Mint</button>
+                  <button class="cond-btn" data-cond="Good">Good</button>
+                  <button class="cond-btn" data-cond="Fair">Fair</button>
+                  <button class="cond-btn" data-cond="Poor">Poor</button>
+                </div>
+              </div>
+              <button class="value-btn" id="check-value-btn">
+                Get Estimate →
+              </button>
+              <div class="result-card" id="result-card">
+                <div class="result-range" id="result-range">₦0 – ₦0</div>
+                <div class="result-hint" id="result-hint">
+                  Estimated resale value
+                </div>
+                <div class="result-actions">
+                  <button class="ra-btn">Sell to Teqpadi</button>
+                  <button class="ra-btn">Explore Swap</button>
+                  <button class="ra-btn">Book Repair</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag reveal">What We Do</span>
+          <h2 class="section-h2 reveal">Our <span>Services</span></h2>
+          <p class="section-sub reveal">
+            Three powerful ways Teqpadi works for you — whether you're a
+            customer or a vendor.
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="sc-icon-wrap">⚙️</div>
+            <div class="sc-title">Gadget Repairs</div>
+            <div class="sc-desc">
+              Expert technicians fix your device right at your doorstep. Screen
+              replacements, battery swaps, water damage — handled with care and
+              speed.
+            </div>
+            <span class="sc-tag">Doorstep Service</span>
+          </div>
+          <div class="service-card reveal">
+            <div class="sc-icon-wrap">🔄</div>
+            <div class="sc-title">Swap Deals</div>
+            <div class="sc-desc">
+              Trade in your old gadget for something newer. Get fair market
+              value assessed transparently, with zero pressure and zero stress.
+            </div>
+            <span class="sc-tag">Fair Trade</span>
+          </div>
+          <div class="service-card reveal">
+            <div class="sc-icon-wrap">🛒</div>
+            <div class="sc-title">Gadget Sales</div>
+            <div class="sc-desc">
+              Browse quality, verified gadgets at competitive Nigerian market
+              prices. Every device is tested and certified before it reaches
+              you.
+            </div>
+            <span class="sc-tag">Verified Devices</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VENDOR TOOLS -->
+    <section id="vendor">
+      <div class="afro-pattern"></div>
+      <div class="container" style="position: relative; z-index: 2">
+        <div class="text-center">
+          <span class="section-tag reveal">For Vendors</span>
+          <h2 class="section-h2 reveal">
+            Run Your
+            <span style="color: var(--yellow)">Tech Business</span> Smarter
+          </h2>
+          <p class="section-sub reveal">
+            Stop juggling spreadsheets and WhatsApp. Teqpadi gives vendors the
+            tools to manage, list, and grow — all in one place.
+          </p>
+        </div>
+        <div class="tools-grid">
+          <div class="tool-card reveal">
+            <div class="tool-card-header">
+              <div class="tool-icon">📷</div>
+              <div>
+                <div class="tool-card-title">IMEI Scanner</div>
+                <span class="tool-card-badge">V1</span>
+              </div>
+            </div>
+            <div class="tool-desc">
+              Snap a photo of any device and our AI auto-extracts the IMEI,
+              model, and specs. Log devices in seconds — no manual entry.
+            </div>
+            <div class="tool-features">
+              <span class="tf-chip">Image → IMEI</span
+              ><span class="tf-chip">Auto-fill specs</span
+              ><span class="tf-chip">Fraud detection</span>
+            </div>
+          </div>
+          <div class="tool-card reveal">
+            <div class="tool-card-header">
+              <div class="tool-icon">📦</div>
+              <div>
+                <div class="tool-card-title">Device Inventory</div>
+                <span class="tool-card-badge">V1</span>
+              </div>
+            </div>
+            <div class="tool-desc">
+              A clean, fast system for logging your stock. Track each device
+              from arrival to sale — condition, price, and status at a glance.
+            </div>
+            <div class="tool-features">
+              <span class="tf-chip">Stock tracking</span
+              ><span class="tf-chip">Status updates</span
+              ><span class="tf-chip">Quick search</span>
+            </div>
+          </div>
+          <div class="tool-card reveal">
+            <div class="tool-card-header">
+              <div class="tool-icon">🌐</div>
+              <div>
+                <div class="tool-card-title">Vendor Page</div>
+                <span class="tool-card-badge">V1</span>
+              </div>
+            </div>
+            <div class="tool-desc">
+              Your own mini-website on Teqpadi. List services, show location,
+              accept WhatsApp contacts — look professional without a developer.
+            </div>
+            <div class="tool-features">
+              <span class="tf-chip">Custom page</span
+              ><span class="tf-chip">WhatsApp CTA</span
+              ><span class="tf-chip">Map location</span>
+            </div>
+          </div>
+          <div class="tool-card reveal">
+            <div class="tool-card-header">
+              <div class="tool-icon">📈</div>
+              <div>
+                <div class="tool-card-title">Sales Analytics</div>
+                <span class="tool-card-badge">Coming Soon</span>
+              </div>
+            </div>
+            <div class="tool-desc">
+              Track what's selling, when, and for how much. Understand your
+              business performance and make smarter stock decisions.
+            </div>
+            <div class="tool-features">
+              <span class="tf-chip">Revenue insights</span
+              ><span class="tf-chip">Customer records</span
+              ><span class="tf-chip">Trend data</span>
+            </div>
+          </div>
+        </div>
+        <div class="vendor-cta-wrap">
+          <div class="vendor-cta-card reveal-scale">
+            <h3>Are you a Tech Vendor?</h3>
+            <p>
+              Join the waitlist — be first to access Teqpadi's vendor tools and
+              grow your business on the platform.
+            </p>
+            <a
+              href="https://wa.me/2348053283754?text=I%27m%20interested%20in%20Teqpadi%20Vendor%20Tools"
+              class="vendor-btn"
+              >Join the Waitlist on WhatsApp</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-adinkra">
+            <div class="adinkra-ring ar1"></div>
+            <div class="adinkra-ring ar2"></div>
+            <div class="adinkra-ring ar3"></div>
+            <div class="adinkra-center">🛡️</div>
+          </div>
+          <div class="about-text">
+            <span class="section-tag reveal">Our Story</span>
+            <h2 class="section-h2 reveal">
+              Built on <span>Trust</span>,<br />Powered by <span>Tech</span>
+            </h2>
+            <p class="reveal">
+              Teqpadi is a Nigerian tech startup committed to transforming how
+              consumers repair, buy, and swap their devices. We believe the tech
+              market should be transparent, structured, and stress-free.
+            </p>
+            <p class="motto reveal">
+              Motto: <strong>"Repair, Swap, Buy – Teqpadi, your Guy."</strong>
+            </p>
+            <div class="trust-points">
+              <div class="trust-item reveal">
+                <div class="trust-icon">✅</div>
+                <div>
+                  <strong>Verified Devices</strong
+                  ><span
+                    >Every gadget we sell or facilitate is tested and verified
+                    for authenticity.</span
+                  >
+                </div>
+              </div>
+              <div class="trust-item reveal">
+                <div class="trust-icon">📍</div>
+                <div>
+                  <strong>Doorstep Service</strong
+                  ><span
+                    >We come to you. No need to trek to Alaba or Computer
+                    Village.</span
+                  >
+                </div>
+              </div>
+              <div class="trust-item reveal">
+                <div class="trust-icon">💰</div>
+                <div>
+                  <strong>Transparent Pricing</strong
+                  ><span
+                    >No hidden fees. No inflated prices. Real market rates,
+                    always.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag reveal">Process</span>
+          <h2 class="section-h2 reveal">How <span>Teqpadi</span> Works</h2>
+          <p class="section-sub reveal">
+            From first contact to a done deal — smooth, simple, and secure.
+          </p>
+        </div>
+        <div class="steps-row">
+          <div class="step reveal">
+            <div class="step-num">1</div>
+            <h4>Check Value or Browse</h4>
+            <p>Use our Value Engine or explore listed devices and services.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">2</div>
+            <h4>Choose a Service</h4>
+            <p>Repair, swap, buy or sell — pick what fits your situation.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">3</div>
+            <h4>Book via WhatsApp</h4>
+            <p>
+              Confirm in seconds. No forms, no friction — just a quick chat.
+            </p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">4</div>
+            <h4>We Come to You</h4>
+            <p>Our expert handles it at your location. You relax.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag reveal">Reviews</span>
+          <h2 class="section-h2 reveal">What Our <span>Customers</span> Say</h2>
+        </div>
+        <div class="testi-grid" id="testi-grid">
+          <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <div class="testi-quote">"</div>
+            <div class="testi-text">
+              My screen cracked and Teqpadi came to my office in Lekki within
+              two hours. Fixed it right there. Absolutely seamless — I didn't
+              even leave my desk.
+            </div>
+            <div class="testi-author">
+              <div class="testi-avatar">AO</div>
+              <div>
+                <div class="testi-name">Adaeze Okafor</div>
+                <div class="testi-role">Marketing Manager, Lagos</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <div class="testi-quote">"</div>
+            <div class="testi-text">
+              Used the Value Engine before selling my iPhone 13. I was about to
+              take ₦80k less than what Teqpadi said I was worth. Sold it for
+              ₦195k!
+            </div>
+            <div class="testi-author">
+              <div class="testi-avatar">KB</div>
+              <div>
+                <div class="testi-name">Kola Badmus</div>
+                <div class="testi-role">Software Engineer, Abuja</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <div class="testi-quote">"</div>
+            <div class="testi-text">
+              As a vendor, the device logging tool saves me 2–3 hours daily. I
+              can track all my stock properly now. Waiting anxiously for the
+              full platform!
+            </div>
+            <div class="testi-author">
+              <div class="testi-avatar">FI</div>
+              <div>
+                <div class="testi-name">Fatima Ibrahim</div>
+                <div class="testi-role">Tech Vendor, Port Harcourt</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <div class="testi-quote">"</div>
+            <div class="testi-text">
+              Swapped my old Tecno for a Samsung Galaxy through Teqpadi. Fair
+              deal, no stress. The whole process took less than a day. Will
+              definitely use again.
+            </div>
+            <div class="testi-author">
+              <div class="testi-avatar">CE</div>
+              <div>
+                <div class="testi-name">Chukwuemeka Eze</div>
+                <div class="testi-role">Student, UNILAG</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <div class="testi-quote">"</div>
+            <div class="testi-text">
+              I was afraid of getting scammed buying a used phone. Teqpadi
+              verified the device and I paid a fair price. The transparency is
+              everything.
+            </div>
+            <div class="testi-author">
+              <div class="testi-avatar">NA</div>
+              <div>
+                <div class="testi-name">Ngozi Anyanwu</div>
+                <div class="testi-role">Teacher, Ibadan</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <div class="testi-quote">"</div>
+            <div class="testi-text">
+              Teqpadi repaired three of my staff phones in one visit.
+              Professional, punctual, and pricing was fully transparent. Best
+              tech service in Lagos.
+            </div>
+            <div class="testi-author">
+              <div class="testi-avatar">TF</div>
+              <div>
+                <div class="testi-name">Tunde Fashola</div>
+                <div class="testi-role">Business Owner, Lagos</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING MODAL -->
+    <div class="modal-overlay" id="booking-modal">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeBooking()">✕</button>
+        <h3 class="modal-title">Book a Service</h3>
+        <p class="modal-sub">
+          Fill in the details — we'll contact you within the hour.
+        </p>
+        <div class="modal-form">
+          <input
+            class="modal-input"
+            id="bk-name"
+            placeholder="Your full name *"
+          />
+          <input
+            class="modal-input"
+            id="bk-phone"
+            placeholder="Phone number *"
+            type="tel"
+          />
+          <input
+            class="modal-input"
+            id="bk-email"
+            placeholder="Email (optional)"
+            type="email"
+          />
+          <select class="modal-select" id="bk-service">
+            <option value="">Select service *</option>
+            <option value="repair">Gadget Repair</option>
+            <option value="swap">Swap Deal</option>
+            <option value="sale">Buy / Sale</option>
+            <option value="valuation">Device Valuation</option>
+          </select>
+          <input
+            class="modal-input"
+            id="bk-device"
+            placeholder="Device (e.g. iPhone 13 Pro) *"
+          />
+          <textarea
+            class="modal-textarea"
+            id="bk-details"
+            placeholder="Any extra details? (optional)"
+            rows="3"
+          ></textarea>
+          <div id="bk-msg" class="modal-msg"></div>
+          <button id="bk-submit" class="modal-submit">Submit Booking</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <section id="cta">
+      <div class="kente"></div>
+      <div class="reveal">
+        <h2>Ready to Experience <span>Teqpadi</span>?</h2>
+        <p>
+          Book a repair, check your device value, or chat with us directly on
+          WhatsApp — right now.
+        </p>
+        <div class="cta-actions">
+          <a
+            href="https://wa.me/2348053283754?text=Hi%20Teqpadi%2C%20I%20want%20to%20book%20a%20repair"
+            class="btn-primary"
+            target="_blank"
+            rel="noopener"
+            >Chat on WhatsApp</a
+          >
+          <a href="#value" class="btn-outline">Check Device Value</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#" class="logo-img" aria-label="Teqpadi">
+              <img
+                src="./src/images/Teqpadi_logo_3-removebg-preview.png"
+                alt="Teqpadi"
+              />
+            </a>
+            <p>
+              The trusted system for buying, selling, repairing and managing
+              tech in Nigeria.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Instagram">📸</a>
+              <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+              <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+              <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h5>Services</h5>
+            <ul>
+              <li><a href="#services">Gadget Repairs</a></li>
+              <li><a href="#services">Swap Deals</a></li>
+              <li><a href="#services">Gadget Sales</a></li>
+              <li><a href="#value">Value Engine</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>For Vendors</h5>
+            <ul>
+              <li><a href="#vendor">IMEI Scanner</a></li>
+              <li><a href="#vendor">Inventory Tool</a></li>
+              <li><a href="#vendor">Vendor Page</a></li>
+              <li><a href="#vendor">Join Waitlist</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Company</h5>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#how">How it Works</a></li>
+              <li><a href="#testimonials">Reviews</a></li>
+              <li><a href="#cta">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Teqpadi. All rights reserved. Built in Nigeria 🇳🇬</span>
+          <span class="footer-motto"
+            >Repair, Swap, Buy – Teqpadi, your Guy.</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- PWA Install Banner -->
+    <div id="install-banner">
+      <span>Add Teqpadi to your home screen!</span>
+      <button class="install-btn" id="install-btn">Install</button>
+      <div class="install-close" id="close-banner">✕</div>
+    </div>
+
+    <script src="src/js/app.js" defer></script>
+  </body>
+</html>
